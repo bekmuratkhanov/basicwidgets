@@ -1,20 +1,44 @@
 import 'package:flutter/material.dart';
-import 'src/features/main_screen/main_screen.dart';
 
 void main() {
-  runApp(const MyApp());
-}
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.greenAccent,
+        body: Column(
+          children: [
+            Text(
+              'Заголовок',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Text('Слово 1'),
+                    Text('Слово 2'),
+                    Text('Слово 3'),
+                    Text('Слово 4'),
+                  ],
+                ),
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Shopping App',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const MainScreen(), //
-    );
-  }
+                SizedBox(width: 50),
+
+                Column(
+                  children: [
+                    Text('Слово 5'),
+                    Text('Слово 6'),
+                    Text('Слово 7'),
+                    Text('Слово 8'),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
 }
